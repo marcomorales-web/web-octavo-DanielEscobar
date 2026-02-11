@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Minecraftia';
-    src: url('assets/fonts/Minecraftia-Regular.ttf') format('truetype');
+  font-family: 'Minecraftia';
+  src: url('/assets/fonts/Minecraftia-Regular.ttf') format('truetype');
 }
 
 .card {
@@ -8,7 +8,7 @@
   width: 320px;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   text-align: center;
   position: relative;
   z-index: 10;
@@ -44,7 +44,9 @@
   border: 2px solid #000;
   background: #999b9e;
   color: white;
-  transition: background 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s;
 }
 
 .botones button:hover {
@@ -72,7 +74,9 @@
   background: #999b9e;
   color: white;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s;
 }
 
 .btn-login:hover {
@@ -106,7 +110,9 @@
 }
 
 .formulario {
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
   opacity: 1;
   transform: translateY(0);
 }

@@ -11,9 +11,9 @@ export class AppComponent implements AfterViewInit {
   vista: 'login' | 'registro' = 'login';
 
   consolas = [
-    { nombre: 'Play Station', src: 'assets/img/logoplay.png' },
-    { nombre: 'XBOX', src: 'assets/img/logo2xbos.png' },
-    { nombre: 'NINTENDO', src: 'assets/img/logonintendo.png' }
+    { nombre: 'Play Station', src: '/assets/img/logoplay.png' },
+    { nombre: 'XBOX', src: '/assets/img/logo2xbos.png' },
+    { nombre: 'NINTENDO', src: '/assets/img/logonintendo.png' }
   ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
