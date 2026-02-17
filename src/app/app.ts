@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
@@ -16,7 +16,9 @@ export class AppComponent implements AfterViewInit {
     { nombre: 'NINTENDO', src: '/assets/img/logonintendo.png' }
   ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, 
+  private router: Router
+  ) {}
 
   mostrarLogin() {
     this.vista = 'login';
@@ -25,6 +27,11 @@ export class AppComponent implements AfterViewInit {
   mostrarRegistro() {
     this.vista = 'registro';
   }
+
+  irInicio() {
+    this.router.navigate(['/inicio']);
+  }
+    
 
   ngAfterViewInit() {
     if (!isPlatformBrowser(this.platformId)) return;
@@ -46,6 +53,7 @@ export class AppComponent implements AfterViewInit {
     img.style.width = `${40 + Math.random() * 60}px`;
     img.style.opacity = '0.15';
     img.style.pointerEvents = 'none';
+    img.style.mixBlendMode = 'multiply'
 
     fondo.appendChild(img);
 

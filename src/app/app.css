@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #363434;
+  background: #5e5a5a;
 }
 
 .botones {
@@ -107,6 +107,7 @@
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
+  background: #ebe8e8;
 }
 
 .formulario {
@@ -125,4 +126,66 @@
 .botones button.active {
   background: #b0b0b0;
   transform: scale(1.05);
+}
+.form-wrapper {
+  position: relative;
+}
+
+.login-form,
+.register-form {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.form-wrapper.login .login-form {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.form-wrapper.login .register-form {
+  opacity: 0;
+  transform: translateX(20px);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Cuando está en REGISTRO */
+.form-wrapper.registro .register-form {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.form-wrapper.registro .login-form {
+  opacity: 0;
+  transform: translateX(-20px);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+@media (max-width: 480px) {
+
+  .card {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .botones button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .formulario input {
+    font-size: 14px;
+  }
+
+  .btn-login {
+    font-size: 14px;
+  }
+
 }
