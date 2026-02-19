@@ -20,8 +20,9 @@
 }
 
 .bienvenida {
-  background: #999b9e;
+  background: linear-gradient(135deg, #003087, #0051c7);
   z-index: 2;
+  flex-direction: column;
 }
 
 .bienvenidos {
@@ -42,8 +43,8 @@
   width: 60%;
   max-width: 700px;
   height: 350px;
-  background: #999b9e;
-  border: 3px solid white;
+  background: #717070;
+  border: 3px solid rgb(109, 109, 111);
   border-radius: 15px;
   position: relative;
   display: flex;
@@ -116,7 +117,7 @@
 }
 
 .ventas {
-    background: #0f0f0f;
+    background: #574f4f;
     transform: translateY(100%);
     z-index: 1;
     display: flex;
@@ -127,6 +128,8 @@
 .dashboard-xbox {
     display: flex;
     gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tile {
