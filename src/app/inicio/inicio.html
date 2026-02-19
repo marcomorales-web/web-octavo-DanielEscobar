@@ -1,11 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MGCyC</title>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="wrapper" [class.deslizado]="deslizado">
+
+  <section class="bienvenida">
+
+    <h1 class="bienvenidos">
+      <span *ngFor="let letra of 'BIENVENIDOS'.split(''); let i = index"
+            [style.animationDelay]="i * 0.1 + 's'">
+        {{ letra }}
+      </span>
+    </h1>
+
+    <div class="sobre" [class.abrir]="deslizado">
+      <div class="logo">MGCyC</div>
+
+      <button class="btn-abrir" (click)="deslizar()">
+        Abrir
+      </button>
+    </div>
+
+  </section>
+
+  <section class="ventas">
+    <div class ="dashboard-xbox">
+      <div class = "tittle" *ngFor="let consola of consolas; let i = index"
+              [class.selected]="i === selectedIndex">
+          {{ consola }}
+        </div>
+    </div>
+  </section>
+
+</div>

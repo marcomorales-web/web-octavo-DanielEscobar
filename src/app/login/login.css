@@ -150,7 +150,6 @@
   pointer-events: none;
 }
 
-/* Cuando está en REGISTRO */
 .form-wrapper.registro .register-form {
   opacity: 1;
   transform: translateX(0);
